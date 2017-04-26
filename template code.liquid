@@ -31,7 +31,7 @@
 	{% endif %}
           <tr>
             <td style="padding:0 0px;"><table cellpadding="0" cellspacing="0" border="0" width="100%" background="{{'/images/custom/content.png' | asset_url!}}"><tr><td style="padding-top: 0px;">
-	<br><center><table border="0" bordercolor="#E6E6E6" style="background-color:#E6E6E6" width="500" cellpadding="3" cellspacing="3">
+	<br><center><table border="0" width="500" cellpadding="3" cellspacing="3">
 	<tr>
 		<td><strong><p style="font: 14pt/14pt Arial, Georgia, serif;color:#3493c9;">You Left Your Parts Behind!</p></strong><br><b>Hi, {{first_name | escape_once}}</b><br><br><p style="font: 13/13/Arial, Georgia, serif;"><b>You left without checking out. <br>Did you find all the parts you needed?<br><br></b></p></td>
 		<td><a href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank"><img src="http://www.partswarehouse.com/v/vspfiles/assets/images/email-marketing/abcart/checkoutnow.png" alt="Check Out Now"></a></td>
@@ -100,7 +100,7 @@
 		  <tbody>
 		  <a href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank"><img src="http://www.partswarehouse.com/v/vspfiles/assets/images/email-marketing/abcart/checkoutnow.png" height="35" alt="Check Out Now" align="right" style="margin-right:5px;"></a>
 			<br><br>
-	<br><center><table border="0" bordercolor="#E6E6E6" style="background-color:#E6E6E6" width="500" cellpadding="3" cellspacing="3">
+	<br><center><table border="0" width="500" cellpadding="3" cellspacing="3">
 	<tr>
 		<td><p style="font: 15/15/Arial, Georgia, serif;"><b><br>If you need any assistance with the checkout process, or if you have any questions about our products or service, please contact us at:</b><br><br><center><b>Email: <a href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" title="Contact Us" style="color:#{{store.link_color}};">{% if reply_to == null %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}</a>  Phone: <a href="tel:8662432721" style="color: #5593c4">866-243-2721</a>.</b></center></h2></p></td>
 		
