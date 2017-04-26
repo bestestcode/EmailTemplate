@@ -30,20 +30,20 @@
           </tr>         
 	{% endif %}
           <tr>
-            <td style="padding:0 0px;"><table cellpadding="0" cellspacing="0" border="0" width="100%" background="{{'/images/custom/content.png' | asset_url!}}"><tr><td style="padding-top: 0px;">
+            <td style="padding:0 0px;"><table cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td style="padding-top: 0px;">
 	<br><center><table border="0" width="550" cellpadding="3" cellspacing="3">
 	<tr>
-		<td><strong><p style="font-size:22pt; color:#000;">Can We Help?</p></strong><br>
+		<td style="vertical-align: top;"><strong><p style="font-size:22pt; color:#000;">Can We Help?</p></strong><br>
     <p style="color:#000; font-size:15pt">
     We noticed you left your parts behind.
     <br>
     Did you need some assistance locating the right part? We encourage you to call, text or email us with any questions.
     </p>
     </td>
-		<td style="width:38%; font: 16pt/16pt Arial, Georgia, serif;">
-    <a style="background-color:blue; width:90%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none;margin:15px; border-radius:6px;     box-shadow: 3px 3px 1px #888;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Call Us</a>
-    <a style="background-color:red; width:90%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none;margin:15px; border-radius:6px;     box-shadow: 3px 3px 1px #888;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Email Us</a>
-    <a style="background-color:blue; width:90%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none;margin:15px; border-radius:6px;     box-shadow: 3px 3px 1px #888;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Go to Cart</a>
+		<td style="width:38%; font-size: 16pt;">
+    <a style="background-color:blue; width:90%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none;margin:0 25px 25px; border-radius:6px;     box-shadow: 3px 3px 1px #888;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Call Us</a>
+    <a style="background-color:red; width:90%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none;margin:25px; border-radius:6px;     box-shadow: 3px 3px 1px #888;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Email Us</a>
+    <a style="background-color:blue; width:90%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none;margin:25px; border-radius:6px;     box-shadow: 3px 3px 1px #888;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Go to Cart</a>
     </td>
 	</tr>
 </table>
@@ -94,21 +94,21 @@
     	<br>
       <center><table border="0" width="500" cellpadding="3" cellspacing="3">
 	<tr align="center">
-    <p style="text-align: center;margin:0;"><font size="2" style="font-size:13px; color:#{{store.text_color}};" ><a href="{{'/' | tag_and_track_url!}}" title="{{'www.PartsWarehouse.com' | escape_once}}" style="color:#{{store.link_color}};">{{'PartsWarehouse.com' | escape_once}}</a></font></p>
-    <p style="font: 15/15pt">
-    Email: <a href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" title="Contact Us" style="color:#{{store.link_color}};">{% if reply_to == null %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}</a> 
+    <p style="font-size:13pt;text-color:#fff">
+    www.PartsWarehouse.com
     <br>
-    Phone: <a href="tel:8662432721" style="color: #5593c4">866-243-2721</a>.</b></center></h2></p>
+    Email: <a href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" title="Contact Us">{% if reply_to == null %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}</a> 
     <br>
-    <center>
-      2578 State Hwy. 276
-      <br>
-      Rockwall, TX. 75032
-      </center>
+    Phone: <a href="tel:8662432721">866-243-2721</a>
+    <br>
+    <br>
+    2578 State Hwy. 276
+    <br>
+    Rockwall, TX. 75032
+    </p>
 	</tr>
 </table>
 		  
-		<br>
 	<table>
           </tr>
         </table>
