@@ -93,17 +93,23 @@
 		  <a href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank" style="margin-right:5px; background-color:red; box-shadow: 3px 3px 1px #888; text-align:center; border-radius:6px; color:white; width: 30%; display:block; text-decoration:none; font: 16pt/16pt Arial, Georgia, serif;padding: 5px 0; ">Checkout Now</a>
     	<br>
       <center><table border="0" width="500" cellpadding="3" cellspacing="3">
-	<tr>
-		<td><p style="font: 15/15/Arial, Georgia, serif;">Email: <a href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" title="Contact Us" style="color:#{{store.link_color}};">{% if reply_to == null %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}</a> 
+	<tr align="center">
+    <p style="text-align: center;margin:0;"><font face="arial" size="2" style="font-size:13px; font-family:arial; color:#{{store.text_color}};" ><a href="{{'/' | tag_and_track_url!}}" title="{{'www.PartsWarehouse.com' | escape_once}}" style="color:#{{store.link_color}};">{{'PartsWarehouse.com' | escape_once}}</a></font></p>
+    <p style="font: 15/15/Arial, Georgia, serif;">
+    Email: <a href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" title="Contact Us" style="color:#{{store.link_color}};">{% if reply_to == null %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}</a> 
     <br>
-    Phone: <a href="tel:8662432721" style="color: #5593c4">866-243-2721</a>.</b></center></h2></p></td>
-		
+    Phone: <a href="tel:8662432721" style="color: #5593c4">866-243-2721</a>.</b></center></h2></p>
+    <br>
+    <center>
+      2578 State Hwy. 276
+      <br>
+      Rockwall, TX. 75032
+      </center>
 	</tr>
 </table>
 		  
-		<br><br>	  
+		<br>
 	<table>
-			<center><td style="padding:0 20px 10px;"><p style="text-align: left;margin:0;"><font face="arial" size="2" style="font-size:13px; font-family:arial; color:#{{store.text_color}};" ><a href="{{'/' | tag_and_track_url!}}" title="{{'PartsWarehouse.com' | escape_once}}" style="color:#{{store.link_color}};">{{'PartsWarehouse.com' | escape_once}}</a></font></p></td>2578 State Hwy. 276<br>Rockwall, TX. 75032</center>
           </tr>
         </table>
       </td>
