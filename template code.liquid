@@ -192,7 +192,14 @@
                                   <table>
                                     <tbody>
                                       <a href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank" style="margin-right:5px; background-color:red; box-shadow: 3px 3px 1px #888; text-align:center; border-radius:6px; color:white; width: 35%; display:block; text-decoration:none; font: 16pt/16pt; padding: 5px 0; ">Checkout Now</a>
+
+                                      {% if test_pre_var == "2" %}
+                                      <p style="color:#000; font-size:14pt">Use code <b>FIXIT5</b> at Checkout</p>
+                                      {% elsif test_pre_var == "3" %}
+                                      <p style="color:#000; font-size:14pt">Use code <b>GET10</b> at Checkout</p>
+                                      {% endif %}
                                       <br>
+
                                         <center>
                                           <table border="0" width="500" cellpadding="3" cellspacing="3">
                                             <tr align="center">
