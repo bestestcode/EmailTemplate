@@ -20,6 +20,16 @@
        box-shadow: 3px 3px 1px #888;
        border-radius:6px;
      }
+    .priceMatchIcon {
+       display: table-cell;
+       background-image: url(http://www.sxsperformance.com/wp/wp-content/uploads/2016/04/pricematchbadge-300x300.png);
+       width: 60px;
+       height: 40px;
+       vertical-align: middle;
+       background-position: center;
+       background-size: 40px 40px;
+      background-repeat: no-repeat;
+    }
   </style>
   </head>
   <body bgcolor="#{{store.background_color}}" style="background-color: #{{store.background_color}}; font-size:13px; font: 22pt/22pt Arial; font-weight: light; color:#{{store.text_color}};">
@@ -87,12 +97,15 @@
                                               {% endif %}
                                                   <br>
                                                   <br>
-                                                  Not sure if it's the right part? Let us verify your part before you order!
+                                                  Not sure if it's the right part?<br>Let us verify your part before you order!
                                                   <br>
                                                   <br>
-                                                  Not sure if it's the best price? We will match any price with our
+                                                  Not sure if it's the best price?<br>We will match any price with our
                                                   <br>
-                                                  Price Match Guarantee!
+                                                  <a href="https://www.partswarehouse.com/help_answer.asp?ID=13#21" style="display:table">
+                                                  <span style="height: 40px;vertical-align: middle;display: table-cell;">Price Match Guarantee!</span>
+                                                  <span class="priceMatchIcon"></span>
+                                                  </a>
                                                   </p>
                                                 </td>
                                                 <td style="width:38%; font-size: 16pt;"  align="center">
