@@ -10,13 +10,13 @@
     .ReadMsgBody {width: 100%;}
     .ExternalClass {width: 100%; background }
     .optionButtons {width:90%;
-     display:block; 
-     color:white; 
-     padding: 5px 0;
-     text-align:center;
-     text-decoration:none;
-     box-shadow: 3px 3px 1px #888;
-     border-radius:6px;
+       display:block; 
+       color:white; 
+       padding: 5px 0;
+       text-align:center;
+       text-decoration:none;
+       box-shadow: 3px 3px 1px #888;
+       border-radius:6px;
      }
   </style>
 </head>
@@ -50,9 +50,9 @@
     </p>
     </td>
 		<td style="width:38%; font-size: 16pt;">
-    <a style="background-color:blue; margin:0 25px 25px;" href="tel:8662432721" target="_blank">Call Us</a>
-    <a style="background-color:red; margin:25px;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
-    <a style="background-color:blue; margin:25px;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Go to Cart</a>
+    <a class="optionButtons" style="background-color:blue; margin:0 25px 25px;" href="tel:8662432721" target="_blank">Call Us</a>
+    <a class="optionButtons" style="background-color:red; margin:25px;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
+    <a class="optionButtons" style="background-color:blue; margin:25px;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Go to Cart</a>
     </td>
 	</tr>
 </table>
