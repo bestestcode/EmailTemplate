@@ -11,7 +11,7 @@
     h2 {margin-bottom:0; margin:0}
     .ReadMsgBody {width: 100%;}
     .ExternalClass {width: 100%; background }
-    .optionButtons {width:90%;
+    .optionButtons {width:85%;
        display:block; 
        color:white; 
        padding: 5px 0;
@@ -65,34 +65,45 @@
                                                 </strong>
                                                 <br>
                                                   <p style="color:#000; font-size:14pt">
-We noticed you left your parts behind.
-                                                {% elsif test_pre_var == "2" %}
+                                                  We noticed you left your parts behind.
+                                              {% elsif test_pre_var == "2" %}
                                                 <strong>
                                                   <p style="font-size:17pt; color:#000;">Your Parts Are Ready For You!</p>
                                                 </strong>
                                                 <br>
                                                   <p style="color:#000; font-size:14pt">
-Hi, {{customer.first_name}}
+                                                  Hi, {{customer.first_name}} <br>Save today with 5% off!
                                               {% elsif test_pre_var == "3" %}
                                                 <strong>
                                                   <p style="font-size:18pt; color:#000;">Last Chance to save!</p>
                                                 </strong>
                                                 <br>
                                                   <p style="color:#000; font-size:14pt">
-Hi, {{customer.first_name}}
+                                                  Hi, {{customer.first_name}} <br>Save today with 10% off!
                                               {% else %}
                                                 <strong>
                                                   <p style="font-size:18pt; color:#000;">test_pre_var = {{test_pre_var}}</p>
                                                 </strong>
                                               {% endif %}
-    
                                                   <br>
-    Did you need some assistance locating the right part? We encourage you to call, text or email us with any questions.
-    
+                                                  <br>
+                                                  Not sure if it's the right part? Let us verify your part before you order!
+                                                  <br>
+                                                  <br>
+                                                  Not sure if it's the best price? We will match any price with our
+                                                  <br>
+                                                  Price Match Guarantee!
                                                   </p>
                                                 </td>
-                                                <td style="width:38%; font-size: 16pt;">
-                                                  <a class="optionButtons" style="background-color:blue; margin:0 25px 25px;" href="tel:8662432721" target="_blank">Call Us</a>
+                                                <td style="width:38%; font-size: 16pt;"  align="center">
+
+                                                  {% if test_pre_var == "2" %}
+                                                  <img style="width:130px; height: 130px;" src="https://www.corkysbbq.com/assets/corkysbbq/images/silvervip.png" alt="5% off"/>
+                                                  {% elsif test_pre_var == "3" %}
+                                                  <img style="width:130px; height: 130px;" src="https://www.stickergiant.com/data/CouponCode10PERCENTOFF2017__587eab7a9f898.png" alt="10% off"/>
+                                                  {% endif %}
+
+                                                  <a class="optionButtons" style="background-color:blue; margin:25px 25px 25px;" href="tel:8662432721" target="_blank">Call Us</a>
                                                   <a class="optionButtons" style="background-color:red; margin:25px;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
                                                   <a class="optionButtons" style="background-color:blue; margin:25px;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Go to Cart</a>
                                                 </td>
