@@ -22,12 +22,12 @@
      }
     .priceMatchIcon {
        display: table-cell;
-       background-image: url(http://www.sxsperformance.com/wp/wp-content/uploads/2016/04/pricematchbadge-300x300.png);
+       background-image: url(https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/pricematchguarantee.jpg);
        width: 60px;
        height: 40px;
        vertical-align: middle;
        background-position: center;
-       background-size: 40px 40px;
+       background-size: 43px 40px;
       background-repeat: no-repeat;
     }
   </style>
@@ -54,7 +54,7 @@
                       <div>
                         <table border=0 cellpadding=0 cellspacing=0 style="border-style:none; border-spacing:0px; border-collapse: collapse;">
                           <tr border=0 cellpadding=0 cellspacing=0>
-                            <img style="border: 0" src="https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/leftyourpartsv1day.jpg" alt="Get the Parts You Left Behind Today!">
+                            <img style="border: 0" src="https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/ABcart1hour.jpeg" alt="Get the Parts You Left Behind Today!">
                             </td>
                           </tr>         
   {% endif %}
@@ -69,21 +69,21 @@
                                         <table border="0" width="550" cellpadding="3" cellspacing="3">
                                           <tr>
                                             <td style="vertical-align: top;">
-                                              {% if test_pre_var == "1" %}
+                                              {% if custom_email_type == "1" %}
                                                 <strong>
                                                   <p style="font-size:22pt; color:#000;">Can We Help?</p>
                                                 </strong>
                                                 <br>
                                                   <p style="color:#000; font-size:14pt">
                                                   We noticed you left your parts behind.
-                                              {% elsif test_pre_var == "2" %}
+                                              {% elsif custom_email_type == "2" %}
                                                 <strong>
                                                   <p style="font-size:17pt; color:#000;">Your Parts Are Ready For You!</p>
                                                 </strong>
                                                 <br>
                                                   <p style="color:#000; font-size:14pt">
                                                   Hi, {{customer.first_name}} <br>Save today with 5% off!
-                                              {% elsif test_pre_var == "3" %}
+                                              {% elsif custom_email_type == "3" %}
                                                 <strong>
                                                   <p style="font-size:18pt; color:#000;">Last Chance to save!</p>
                                                 </strong>
@@ -92,7 +92,7 @@
                                                   Hi, {{customer.first_name}} <br>Save today with 10% off!
                                               {% else %}
                                                 <strong>
-                                                  <p style="font-size:18pt; color:#000;">test_pre_var = {{test_pre_var}}</p>
+                                                  <p style="font-size:18pt; color:#000;">custom_email_type = {{custom_email_type}}</p>
                                                 </strong>
                                               {% endif %}
                                                   <br>
@@ -110,15 +110,15 @@
                                                 </td>
                                                 <td style="width:38%; font-size: 16pt;"  align="center">
 
-                                                  {% if test_pre_var == "2" %}
-                                                  <img style="width:130px; height: 130px;" src="https://www.corkysbbq.com/assets/corkysbbq/images/silvervip.png" alt="5% off"/>
-                                                  {% elsif test_pre_var == "3" %}
-                                                  <img style="width:130px; height: 130px;" src="https://www.stickergiant.com/data/CouponCode10PERCENTOFF2017__587eab7a9f898.png" alt="10% off"/>
+                                                  {% if custom_email_type == "2" %}
+                                                  <img style="width:145px; height: 130px;" src="https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/checkoutnow5off.jpg" alt="5% off"/>
+                                                  {% elsif custom_email_type == "3" %}
+                                                  <img style="width:143px; height: 130px;" src="https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/lastchance10off.jpg" alt="10% off"/>
                                                   {% endif %}
 
-                                                  <a class="optionButtons" style="background-color:blue; margin:25px 25px 25px;" href="tel:8662432721" target="_blank">Call Us</a>
-                                                  <a class="optionButtons" style="background-color:red; margin:25px;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
-                                                  <a class="optionButtons" style="background-color:blue; margin:25px;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Go to Cart</a>
+                                                  <a class="optionButtons" style="background-color:blue; margin:25px 0;" href="tel:8662432721" target="_blank">Call Us</a>
+                                                  <a class="optionButtons" style="background-color:red; margin:25px 0;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
+                                                  <a class="optionButtons" style="background-color:blue; margin:25px 0;" href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank">Go to Cart</a>
                                                 </td>
                                               </tr>
                                             </table>
@@ -193,9 +193,9 @@
                                     <tbody>
                                       <a href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank" style="margin-right:5px; background-color:red; box-shadow: 3px 3px 1px #888; text-align:center; border-radius:6px; color:white; width: 35%; display:block; text-decoration:none; font: 16pt/16pt; padding: 5px 0; ">Checkout Now</a>
 
-                                      {% if test_pre_var == "2" %}
+                                      {% if custom_email_type == "2" %}
                                       <p style="color:#000; font-size:14pt">Use code <b>FIXIT5</b> at Checkout</p>
-                                      {% elsif test_pre_var == "3" %}
+                                      {% elsif custom_email_type == "3" %}
                                       <p style="color:#000; font-size:14pt">Use code <b>GET10</b> at Checkout</p>
                                       {% endif %}
                                       <br>
