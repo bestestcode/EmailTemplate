@@ -1,0 +1,217 @@
+{% comment %}Version: 20121204140000{% endcomment %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{{subject | strip_html | escape_once}}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset={{store.character_set | escape_once}}" />
+    <style type="text/css">
+    p {margin-bottom:0; margin:0}
+    h2 {margin-bottom:0; margin:0}
+    .ReadMsgBody {width: 100%;}
+    .ExternalClass {width: 100%; background }
+    .optionButtons {width:85%;
+       display:block; 
+       color:white; 
+       padding: 5px 0;
+       text-align:center;
+       text-decoration:none;
+       box-shadow: 3px 3px 1px #888;
+       border-radius:6px;
+     }
+    .priceMatchIcon {
+       display: table-cell;
+       background-image: url(https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/pricematchguarantee.jpg);
+       width: 60px;
+       height: 40px;
+       vertical-align: middle;
+       background-position: center;
+       background-size: 43px 40px;
+      background-repeat: no-repeat;
+    }
+  </style>
+  </head>
+  <body bgcolor="#{{store.background_color}}" style="background-color: #{{store.background_color}}; font-size:13px; font: 22pt/22pt Arial; font-weight: light; color:#{{store.text_color}};">
+    <table cellpadding="0" cellspacing="0" width="100%" bgcolor="#{{store.background_color}}">
+      <tr>
+        <td align="center" style="background-color: #{{store.background_color}};">
+          <table cellpadding="0" cellspacing="0" border="0" width="600">
+            <tr>
+              <td>
+                <p style="font-size:10px; color:#{{store.text_color}}; padding-left: 0px; padding-top: 0px; padding-right: 0; padding-bottom: 0px; width:590px; text-align: left;">Having trouble viewing? 
+                  <a href="{{'html' | message_url!}}" title="Trouble Viewing?" style="display: inline; color:#{{store.link_color}};">Click here</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border:solid 0px #{{store.border_color}};">
+                <table cellpadding="0" cellspacing="0" border="0" width="598" bgcolor="#ffffff" style="background-color: #ffffff;">
+          {% if store.store_logo_version != 0 %}
+          
+                  <tr align="center">
+                    <td>
+                      <div>
+                        <table border=0 cellpadding=0 cellspacing=0 style="border-style:none; border-spacing:0px; border-collapse: collapse;">
+                          <tr border=0 cellpadding=0 cellspacing=0>
+                            <img style="border: 0" src="https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/ABcart1hour.jpeg" alt="Get the Parts You Left Behind Today!">
+                            </td>
+                          </tr>         
+  {% endif %}
+          
+                          <tr>
+                            <td style="padding:0 0px;">
+                              <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                  <td style="padding-top: 0px;">
+                                    <br>
+                                      <center>
+                                        <table border="0" width="550" cellpadding="3" cellspacing="3">
+                                          <tr>
+                                            <td style="vertical-align: top;">
+                                                <strong>
+                                                  <p style="font-size:17pt; color:#000;">Your Parts Are Ready For You!</p>
+                                                </strong>
+                                                <br>
+                                                  <p style="color:#000; font-size:14pt">
+                                                  Hi, {{customer.first_name}} <br>Save today with 5% off!
+
+                                                  <br>
+                                                  <br>
+                                                  Not sure if it's the right part?<br>Let us verify your part before you order!
+                                                  <br>
+                                                  <br>
+                                                  Not sure if it's the best price?<br>We will match any price with our
+                                                  <br>
+                                                  <a href="https://www.partswarehouse.com/help_answer.asp?ID=13#21" style="display:table">
+                                                  <span style="height: 40px;vertical-align: middle;display: table-cell;">Price Match Guarantee!</span>
+                                                  <span class="priceMatchIcon"></span>
+                                                  </a>
+                                                  </p>
+                                                </td>
+                                                <td style="width:38%; font-size: 16pt;"  align="center">
+
+                                                  <img style="width:145px; height: 130px;" src="https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/checkoutnow5off.jpg" alt="5% off"/>
+
+                                                  <a class="optionButtons" style="background-color:blue; margin:25px 0;" href="tel:8662432721" target="_blank">Call Us</a>
+                                                  <a class="optionButtons" style="background-color:red; margin:25px 0;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
+                                                  <a class="optionButtons" style="background-color:blue; margin:25px 0;" href="sms:/8662432721" target="_blank">Text Us</a>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </center>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="padding:10px;">
+                                    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                      <tr>
+                                        <td>
+                                          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <tbody>
+                  {% foreachslice slice in items size:3 %}
+                    
+                                              <tr>
+                                                <td>
+                                                  <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                                                    <tbody align="center">
+                                                      <tr class="image_row">
+                    {% for index in (0..2) %}
+                      {% assign item = slice[index] %}
+                      {% if item == null %}
+                        
+                                                        <td width="172"></td>
+                      {% else %}
+                        
+                                                        <td width="172">
+                                                          <a href="{{item | product_url!}}" title="{{item.productname | escape_once}}">
+                                                            <img src="{{item | product_photo_url!:'2T',172}}" alt="{{item.productname | escape_once}}" border="0" />
+                                                          </a>
+                                                        </td>
+                      {% endif %}
+                    {% endfor %}
+                    
+                                                      </tr>
+                                                      <tr class="name_row">
+                    {% for index in (0..2) %}
+                      {% assign item = slice[index] %}
+                      {% if item == null %}
+                        
+                                                        <td></td>
+                      {% else %}
+                        
+                                                        <td style="text-align: center; padding:5px;">
+                                                          <a href="{{item | product_url!}}" title="{{item.productname | escape_once}}" style=" text-align: center; font-size: 12px; color:#{{store.text_color}}; text-decoration: none;">
+                                                            <b style="text-align: center;">{{item.productname | strip_html | escape_once}}</b>
+                                                          </a>
+                                                        </td>
+                      {% endif %}
+                    {% endfor %}
+                    
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                  {% endforeachslice %}
+                
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <table>
+                                    <tbody>
+                                      <a href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank" style="margin-right:5px; background-color:yellow; box-shadow: 3px 3px 1px #888; text-align:center; border-radius:6px; color:black; width: 35%; display:block; text-decoration:none; font: 16pt/16pt; padding: 5px 0; ">Checkout Now</a>
+
+                                      <p style="color:#000; font-size:14pt">Use code <b>FIXIT5</b> at Checkout</p>
+                                      <br>
+
+                                        <center>
+                                          <table border="0" width="500" cellpadding="3" cellspacing="3">
+                                            <tr align="center">
+                                              <p style="font-size:13pt;color:#000">
+    www.PartsWarehouse.com
+    
+                                                <br>
+    Email: 
+                                                  <a href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" title="Contact Us">{% if reply_to == null %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}</a>
+                                                  <br>
+    Phone: 
+                                                    <a href="tel:8662432721">866-243-2721</a>
+                                                    <br>
+                                                      <br>
+    2578 State Highway 276
+    
+                                                        <br>
+    Rockwall, TX 75032
+    
+                                                        </p>
+                                                      </tr>
+                                                    </table>
+                                                    <table>
+                                                    </tr>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <p style="font-size:10px; color:#{{store.text_color}}; padding-left: 10px; padding-top: 5px; padding-right: 0; padding-bottom: 0; width:590px; text-align: left;">If you'd like to unsubscribe from future e-mails, please 
+                                                    <a href="{{nil | unsubscribe_url!}}" title="Unsubscribe" style="display: inline; color:#{{store.link_color}};">click here</a>.
+                                                  </p>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </table>
+{% track_view_image %}
+
+                                    </body>
+                                  </html>
