@@ -11,25 +11,6 @@
     h2 {margin-bottom:0; margin:0}
     .ReadMsgBody {width: 100%;}
     .ExternalClass {width: 100%; background }
-    .optionButtons {width:85%;
-       display:block; 
-       color:white; 
-       padding: 5px 0;
-       text-align:center;
-       text-decoration:none;
-       box-shadow: 3px 3px 1px #888;
-       border-radius:6px;
-     }
-    .priceMatchIcon {
-       display: table-cell;
-       background-image: url(https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/pricematchguarantee.jpg);
-       width: 60px;
-       height: 40px;
-       vertical-align: middle;
-       background-position: center;
-       background-size: 43px 40px;
-      background-repeat: no-repeat;
-    }
   </style>
   </head>
   <body bgcolor="#{{store.background_color}}" style="background-color: #{{store.background_color}}; font-size:13px; font: 22pt/22pt Arial; font-weight: light; color:#{{store.text_color}};">
@@ -84,15 +65,15 @@
                                                   <br>
                                                   <a href="https://www.partswarehouse.com/help_answer.asp?ID=13#21" style="display:table">
                                                   <span style="height: 40px;vertical-align: middle;display: table-cell;">Price Match Guarantee!</span>
-                                                  <span class="priceMatchIcon"></span>
+                                                  <span style="display: table-cell; background-image: url(https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/pricematchguarantee.jpg); width: 60px; height: 40px; vertical-align: middle; background-position: center; background-size: 43px 40px; background-repeat: no-repeat;"></span>
                                                   </a>
                                                   </p>
                                                 </td>
                                                 <td style="width:38%; font-size: 16pt;"  align="center">
 
-                                                  <a class="optionButtons" style="background-color:blue; margin:25px 0;" href="tel:8662432721" target="_blank">Call Us</a>
-                                                  <a class="optionButtons" style="background-color:red; margin:25px 0;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
-                                                  <a class="optionButtons" style="background-color:blue; margin:25px 0;" href="sms:/8662432721" target="_blank">Text Us</a>
+                                                  <a style="background-color:blue; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="tel:8662432721" target="_blank">Call Us</a>
+                                                  <a style="background-color:red; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
+                                                  <a style="background-color:blue; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="sms:/8662432721" target="_blank">Text Us</a>
                                                 </td>
                                               </tr>
                                             </table>
