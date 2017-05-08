@@ -55,6 +55,7 @@
                                                 </strong>
                                                 <br>
                                                   <p style="color:#000; font-size:14pt">
+                                                  Hi, {{customer.first_name}} <br>
                                                   We noticed you left your parts behind.
                                                   <br>
                                                   <br>
@@ -101,7 +102,7 @@
                                             </thead>
 
                                             <tbody>
-                  {% foreachslice slice in object.line_items size:3 %}
+                  {% foreachslice slice in items size:3 %}
                     
                                               <tr>
                                                 <td>
