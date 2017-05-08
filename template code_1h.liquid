@@ -73,7 +73,7 @@
 
                                                   <a style="background-color:blue; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="tel:8662432721" target="_blank">Call Us</a>
                                                   <a style="background-color:red; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
-                                                  <a style="background-color:blue; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="sms:/8662432721" target="_blank">Text Us</a>
+                                                  <a style="background-color:blue; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="sms:8662432721" target="_blank">Text Us</a>
                                                 </td>
                                               </tr>
                                             </table>
@@ -95,7 +95,7 @@
                                                 </tr></table></th>
                                               </tr>
                                             </thead>
-                                            
+
                                             <tbody>
                   {% foreachslice slice in object.line_items size:3 %}
                     
