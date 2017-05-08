@@ -74,9 +74,12 @@
 
                                                   <img style="width:145px; height: 130px;" src="https://www.partswarehouse.com/v/vspfiles/assets/images/Email-Marketing/abcart/checkoutnow5off.jpg" alt="5% off"/>
 
-                                                  <a style="background-color:blue; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="tel:8662432721" target="_blank">Call Us</a>
-                                                  <a style="background-color:red; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">Email Us</a>
-                                                  <a style="background-color:blue; margin:25px 0; width:85%; display:block; color:white; padding: 5px 0; text-align:center; text-decoration:none; box-shadow: 3px 3px 1px #888; border-radius:6px;" href="sms:/8662432721" target="_blank">Text Us</a>
+                                                  <a style="width:85%; margin:15px 0; display: block;" href="tel:8662432721" target="_blank">
+                                                   <img src="http://www.partswarehouse.com/v/vspfiles/assets/images/email-marketing/abcart/callus.jpg" style="width:100%;" alt="Check Out Now"></a>
+                                                  <a style="width:85%; margin:15px 0; display: block;" href="mailto:{% if reply_to == empty %}{{from_emailaddress | escape_once}}{% else %}{{reply_to_emailaddress | escape_once}}{% endif %}" target="_blank">
+                                                   <img src="http://www.partswarehouse.com/v/vspfiles/assets/images/email-marketing/abcart/emailus.jpg" style="width:100%;" alt="Check Out Now"></a>
+                                                  <a style="width:85%; margin:15px 0; display: block;" href="sms:8662432721" target="_blank">
+                                                   <img src="http://www.partswarehouse.com/v/vspfiles/assets/images/email-marketing/abcart/textus.jpg" style="width:100%;" alt="Check Out Now"></a>
                                                 </td>
                                               </tr>
                                             </table>
@@ -90,8 +93,14 @@
                                   <td style="padding:10px;">
                                     <table cellpadding="0" cellspacing="0" border="0" width="100%">
                                       <tr>
-                                        <td>
-                                          <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                        <td style="border:solid 1px #{{store.border_color}};"><table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                            <thead>
+                                              <tr>
+                                                <th><table cellpadding="0" cellspacing="0" border="0" width="100%" height="31" background="{{'/images/custom/header_background.png' | asset_url!}}"><tr>
+                                                  <td><h3 style="margin:0; line-height:31px; font-size: 16px; color:#{{store.link_color}}; text-align: center;"><font face="arial" size="3" color="#{{store.link_color}}" style="font-size: 16px; color:#{{store.link_color}}; text-align: center">Your Parts:</font></h3></td>
+                                                </tr></table></th>
+                                              </tr>
+                                            </thead>
                                             <tbody>
                   {% foreachslice slice in items size:3 %}
                     
@@ -149,9 +158,9 @@
                                 <tr>
                                   <table>
                                     <tbody>
-                                      <a href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank" style="margin: 0 auto; background-color:yellow; box-shadow: 3px 3px 1px #888; text-align:center; border-radius:6px; color:black; width: 35%; display:block; text-decoration:none; font: 16pt/16pt; padding: 5px 0; ">Checkout Now</a>
-
-                                      <p style="color:#000; font-size:14pt">Use code <b>FIXIT5</b> at Checkout</p>
+                                      <a href="{{cartid | escape_url | prepend:'/v/ShoppingCartTransfer.asp?CartID=' | tag_and_track_url!}}" target="_blank" style="margin: 0 auto; width: 35%; display:block; text-decoration:none; font: 16pt/16pt;">
+                                        <img src="http://www.partswarehouse.com/v/vspfiles/assets/images/email-marketing/abcart/checkoutnowbutton.jpg" style="width:100%;" alt="Check Out Now"></a>
+                                        <p style="color:#000; font-size:14pt">Use code <b>FIXIT5</b> at Checkout</p>
                                       <br>
 
                                         <center>
